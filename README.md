@@ -66,3 +66,7 @@ become proficient in deploying a DevSecOps pipeline within AWS for an enterprise
 
 For a detailed explanation of the security terms used throughout the course, please refer to
 the [Security Terms Overview](./security_terms.md) document.
+
+## Tools Explanation
+
+For detailed information about the tools used in this course, refer to the [Tools Explanation](./tools_explanation.md) document.
