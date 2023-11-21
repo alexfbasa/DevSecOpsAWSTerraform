@@ -1,5 +1,3 @@
-Certainly! Here's a step-by-step guide:
-
 ### 1. Create AWS Free Tier Account
 
 Visit the [AWS Free Tier](https://aws.amazon.com/free/) page and follow the instructions to create a new AWS account.
