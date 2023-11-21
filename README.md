@@ -62,5 +62,7 @@ insights into implementing these services.
 Commit to implementing each tool integrated into our CI/CD pipeline. Embrace the hands-on nature of this laboratory to
 become proficient in deploying a DevSecOps pipeline within AWS for an enterprise environment.
 
-Get ready for an exciting journey into the world of DevSecOps on AWS. Your commitment and enthusiasm will drive your
-success in this laboratory. Let's jump into action, and I'll see you in the next lecture!
+# Security Terms Overview
+
+For a detailed explanation of the security terms used throughout the course, please refer to
+the [Security Terms Overview](./security_terms.md) document.
