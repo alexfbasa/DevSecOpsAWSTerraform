@@ -1,5 +1,25 @@
 version: 0.1
+env:
+  secrets-manager:
+    TOKEN: firstSecret:tokenForSonar
 phases:
   build:
     commands:
-      - mvn verify sonar:sonar -Dsonar.projectKey=projectKey -Dsonar.organization=projectOrg -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=token 
+      - apt-get update
+      - apt-get -y install wget
+      - apt-get -y install default-jdk
+      - wget https://github.com/zaproxy/zaproxy/releases/download/v2.11.1/ZAP_2.11.1_Linux.tar.gz
+      - tar -xvf ZAP_2.11.1_Linux.tar.gz
+      - chmod +x ZAP_2.11.1/zap.sh
+      - cd ZAP_2.11.1
+      - ./ZAP_2.11.1/zap.sh -cmd -quickurl https://www.example.com -quickprogress -quickout ../zap_report.html
+      - cd ..
+      - mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=devsecopsawsterraformsast_devsecopsawsterraformsast -Dsonar.login=$TOKEN
+      - sleep 5
+      - |-
+        quality_status=$(curl -s -u $TOKEN: https://sonarcloud.io/api/qualitygates/project_status?projectKey=devsecopsawsterraformsast_devsecopsawsterraformsast | jq -r '.projectStatus.status')
+        echo "SonarCloud analysis status is $quality_status";
+        if [ $quality_status = "ERROR" ]; then exit 1; fi
+artifacts:
+  files:
+    - zap_report.html

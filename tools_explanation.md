@@ -95,3 +95,19 @@ Let's understand the tools mentioned in the development and operations stages of
 
 These tools collectively contribute to building a robust DevSecOps pipeline, ensuring security at every stage of
 development and operations.
+
+### 6. S3 Bucket (Artifact Storage)
+
+- Purpose: Centralized storage for build artifacts.
+- Usage: Configure AWS CodeBuild to store artifacts in an S3 bucket.
+- Impact: Enhances security and accessibility of build artifacts, facilitating integration with other AWS services.
+
+### 7. Amazon VPC endpoint.
+
+In this tutorial, we will explore how to effectively utilize Virtual Private Cloud (VPC) connectivity in the context of
+AWS CodeCommit and CodeBuild. VPC integration becomes crucial when you need to access resources within a specific VPC
+from your CodeBuild environment.
+
+Why VPC Integration?
+AWS CodeBuild projects often require access to resources within a VPC, such as databases or other internal services. VPC
+integration ensures secure communication between your CodeBuild environment and the resources residing in the VPC.

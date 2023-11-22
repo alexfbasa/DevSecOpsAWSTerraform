@@ -44,11 +44,11 @@ the next run.*
 
 ### CLI
 
-![Snyk CLI Reachable Vulnerabilities](CLI_reachable.png)
+![Snyk CLI Reachable Vulnerabilities](images/CLI_reachable.png)
 
 ### Snyk UI
 
-![Snyk UI Reachable Vulnerabilities](UI_reachable.png)
+![Snyk UI Reachable Vulnerabilities](images/UI_reachable.png)
 
 ## Getting Started
 
@@ -71,3 +71,6 @@ the [Security Terms Overview](./security_terms.md) document.
 For detailed information about the tools used in this course, refer to the [Tools Explanation](./tools_explanation.md)
 document.
 
+## Step-by-Step Explanation
+
+For detailed explanation about this set up go to [Walking Through](./walking_through.md)
